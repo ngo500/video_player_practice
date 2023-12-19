@@ -1,5 +1,7 @@
 package com.example.video_player
 
+import android.net.Uri
+import android.net.Uri.parse
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //specify the location of the video file
+        val uri: Uri = parse(
+            "android.resource://" + "com.example" + "/" + "test"
+        )
 
         setSupportActionBar(binding.toolbar)
 
